@@ -31,6 +31,7 @@ void CExamMFCDlg::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(CExamMFCDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_WM_LBUTTONDOWN()
 END_MESSAGE_MAP()
 
 
@@ -86,3 +87,19 @@ HCURSOR CExamMFCDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+LRESULT CExamMFCDlg::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
+{
+	// TODO: Add your specialized code here and/or call the base class
+
+	return CDialogEx::WindowProc(message, wParam, lParam);
+}
+
+
+void CExamMFCDlg::OnLButtonDown(UINT nFlags, CPoint point)
+{
+	// TODO: Add your message handler code here and/or call default
+
+	CDialogEx::OnLButtonDown(nFlags, point);
+}
