@@ -32,10 +32,7 @@ BEGIN_MESSAGE_MAP(CExamMFCDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	ON_WM_LBUTTONDOWN()
-<<<<<<< HEAD
-=======
 	ON_BN_CLICKED(IDC_BUTTON_SHOW_STR, &CExamMFCDlg::OnBnClickedButtonShowStr)
->>>>>>> 4c13b26532bd1312258ef8caa8e900a8771343e8
 END_MESSAGE_MAP()
 
 
@@ -107,12 +104,15 @@ void CExamMFCDlg::OnLButtonDown(UINT nFlags, CPoint point)
 
 	CDialogEx::OnLButtonDown(nFlags, point);
 }
-<<<<<<< HEAD
-=======
 
 
 void CExamMFCDlg::OnBnClickedButtonShowStr()
 {
 	// TODO: Add your control notification handler code here
+	// 문자열 지정 변수 (유니코드)
+	wchar_t str[64];
+	// IDC_EDIT_INPUT_STR인 Control 에서 문자열을 str에 저장
+	GetDlgItemText(IDC_EDIT_INPUT_STR, str, 64);
+	// Message함수로 화면 문자열 출력
+	MessageBox(str);
 }
->>>>>>> 4c13b26532bd1312258ef8caa8e900a8771343e8
